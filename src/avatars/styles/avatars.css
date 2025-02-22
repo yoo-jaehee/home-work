@@ -1,0 +1,55 @@
+/* 여기에 스타일을 구현해 주세요 */
+.container {
+  width: 396px;
+  height: 195px;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.row1 {
+  width: 100%;
+  height: 64px;
+  margin-bottom: 20px;
+  display: block;
+  box-sizing: border-box;
+}
+
+.row2 {
+  width: 100%;
+  height: 64px;
+  display: block;
+}
+
+.profile_box {
+  display: inline-block;
+  margin-right: 20px;
+  width: 64px;
+  height: 64px;
+  position: relative;
+}
+
+.last {
+  margin-right: 0;
+}
+
+.profile_img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.state {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: #dbdbdb;
+}
+
+.online {
+  background-color: #4cfe88;
+}
