@@ -1,0 +1,115 @@
+:root {
+  --base-font-size: 16px;
+  --base-font-color: #121212;
+}
+
+.login-container {
+  width: calc(100% - 40px); /* 좌우 여백 20px씩 포함 */
+  max-width: 400px; /* 최대 너비 설정 (원하는 크기로 조정 가능) */
+  margin: auto; /* 가운데 정렬 */
+  padding: 0 1.25rem;
+}
+
+/* 데스크탑 */
+@media (min-width: 768px) {
+  .login-container {
+    max-width: 500px; /* 가로 크기 500px */
+    width: calc(100% - 40px); /* 좌우 여백 유지 */
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: center; /* 가운데 정렬 */
+  align-items: center;
+  width: 100%; /* 부모 기준으로 정렬 */
+  margin-bottom: 1.25rem;
+}
+
+input,
+.login-button button {
+  box-sizing: border-box;
+}
+
+input {
+  font-size: 0.875rem;
+  height: 45px;
+  width: 100%;
+  padding: 0 0.625rem;
+  border: 1px solid #dadada;
+  background-color: #fff;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 0.625rem;
+}
+
+input:focus {
+  border-color: #03cf5d;
+  background-color: #e9f0fd;
+}
+
+.login-button button {
+  font-size: 16px;
+  height: 45px;
+  width: 100%;
+  color: #fff;
+  background-color: #03cf5d;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  margin-top: 0.625rem;
+  font-weight: bold;
+}
+
+.login-button button:hover {
+  background-color: #02b84d;
+}
+
+.login-button button:focus {
+  background-color: #24388d;
+  outline: none;
+}
+
+.checked {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px; /* SVG와 텍스트 사이 여백 */
+  cursor: pointer;
+  margin-top: 0.625rem; /* 위쪽 여백 */
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    display: flex;
+    align-items: center; /* 수직 정렬 */
+    justify-content: space-between; /* 왼쪽-오른쪽 배치 */
+    width: 100%;
+  }
+
+  .checked {
+    display: flex;
+    align-items: center;
+  }
+
+  .ip-onoff {
+    /* 오른쪽 요소 그룹 */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* IP 보안과 ON 사이 간격 */
+  }
+}
+
+.ip {
+  text-decoration: none; /* 밑줄 제거 */
+  color: #121212; /* 글자 색상 */
+  font-size: 16px; /* 글자 크기 */
+}
+
+@media (max-width: 768px) {
+  .ip-onoff {
+    display: none; /* 모바일에서 숨김 */
+    margin-top: 10px;
+  }
+}
