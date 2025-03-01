@@ -51,9 +51,11 @@
           name="user-id"
           placeholder="아이디"
           required
+          pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
         />
-        <p class="error-message">아이디를 입력해주세요.</p>
+        <p class="error-message">아이디는 이메일 형식으로 입력해주세요.</p>
       </div>
+
       <div class="password">
         <!-- 비밀번호 입력 -->
         <label for="password"></label>
@@ -63,7 +65,9 @@
           name="password"
           placeholder="비밀번호"
           required
+          minlength="10"
         />
+        <p class="error-message">비밀번호는 10자 이상 입력해 주세요.</p>
       </div>
 
       <div class="login-button">

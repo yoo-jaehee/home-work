@@ -43,10 +43,25 @@ input {
   transition: all 0.3s ease-in-out;
   margin-bottom: 0.625rem;
 }
+/* 에러 메시지 기본적으로 숨김 */
+.error-message {
+  display: none;
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
 
 input:focus {
   border-color: #03cf5d;
   background-color: #e9f0fd;
+}
+
+.id,
+.password {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  position: relative;
 }
 
 .login-button button {
@@ -112,4 +127,8 @@ input:focus {
     display: none; /* 모바일에서 숨김 */
     margin-top: 10px;
   }
+}
+
+input:invalid:not(:placeholder-shown) ~ .error-message {
+  display: block;
 }
